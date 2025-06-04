@@ -12,7 +12,7 @@ link da aplicação: [CLIQUE AQUI](https://staging.d3drvlzroj12nd.amplifyapp.com
 - Douglas Rodrigues Toledo
 - João Pedro de Novais Sombra
 - Luiz Felipe Correa Soares
-- Thiago da Silveira Gentil
+- Thiago da Silveira Gentil - 1072112389 - Tgentil
 
 ## 📝 Descrição do Projeto
 
