@@ -11,7 +11,7 @@ link da aplicação: [CLIQUE AQUI](https://staging.d3drvlzroj12nd.amplifyapp.com
 - Davi Cardoso Rhee
 - Douglas Rodrigues Toledo
 - João Pedro de Novais Sombra - 1072221731 - jopnovais
-- Luiz Felipe Correa Soares
+- Luiz Felipe Correa Soares - 1072223007  - LFSCorr
 - Thiago da Silveira Gentil - 1072112389 - Tgentil
 
 ## 📝 Descrição do Projeto
