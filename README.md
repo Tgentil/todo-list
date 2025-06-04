@@ -80,7 +80,7 @@ Este projeto é uma aplicação web moderna para gerenciamento de tarefas (Todo 
 1. **Clone o repositório:**
 
    ```bash
-   git clone [URL_DO_REPOSITÓRIO]
+   git clone https://github.com/Tgentil/todo-list.git
    ```
 
 2. **Instale as dependências:**
