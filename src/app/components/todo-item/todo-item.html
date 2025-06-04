@@ -1,0 +1,39 @@
+<div
+  class="todo-item"
+  [class.completed]="todo.completed"
+  [class.dark-mode]="isDarkMode"
+  (click)="openDetailModal($event)"
+  cdkDrag
+>
+  <div class="drag-handle" cdkDragHandle>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 6H16M8 12H16M8 18H16"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </div>
+
+  <input
+    type="checkbox"
+    [checked]="todo.completed"
+    (change)="onToggleComplete()"
+  />
+  <span class="title">{{ todo.title }}</span>
+  <button class="delete-btn" (click)="onDelete()">X</button>
+</div>
+
+<app-todo-detail-modal
+  *ngIf="showDetailModal"
+  [todo]="todo"
+  [isDarkMode]="isDarkMode"
+  (close)="showDetailModal = false"
+></app-todo-detail-modal>

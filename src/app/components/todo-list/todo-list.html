@@ -1,0 +1,33 @@
+<div class="todo-list" [class.dark-mode]="isDarkMode$ | async">
+  <div class="header">
+    <h2>Minhas Tarefas</h2>
+    <button class="theme-toggle" (click)="toggleTheme()">
+      {{ (isDarkMode$ | async) ? '☀️' : '🌙' }}
+    </button>
+  </div>
+
+  <div class="add-todo">
+    <input
+      type="text"
+      [(ngModel)]="newTodoTitle"
+      (keyup.enter)="addTodo()"
+      placeholder="Adicionar nova tarefa..."
+    />
+    <button (click)="addTodo()">+</button>
+  </div>
+
+  <div class="todo-items" cdkDropList (cdkDropListDropped)="drop($event)">
+    <app-todo-item
+      *ngFor="let todo of todos$ | async"
+      [todo]="todo"
+      [isDarkMode]="(isDarkMode$ | async) ?? false"
+      (delete)="deleteTodo($event)"
+      (toggleComplete)="toggleTodo($event)"
+      cdkDrag
+    ></app-todo-item>
+  </div>
+
+  <div class="empty-state" *ngIf="(todos$ | async)?.length === 0">
+    <p>Nenhuma tarefa ainda. Adicione uma nova tarefa acima!</p>
+  </div>
+</div>

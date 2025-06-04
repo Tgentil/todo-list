@@ -1,0 +1,63 @@
+<div class="modal-backdrop" (click)="onClose()">
+  <div
+    class="modal-content"
+    [class.dark-mode]="isDarkMode"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="modal-header">
+      <h2>{{ todo.title }}</h2>
+      <button class="close-button" (click)="onClose()">×</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="description-section">
+        <div class="section-header">
+          <h3>Descrição</h3>
+          <button
+            *ngIf="!isEditingDescription"
+            (click)="startEditingDescription()"
+          >
+            Editar
+          </button>
+        </div>
+
+        <div *ngIf="!isEditingDescription" class="description-content">
+          <markdown [data]="todo.description || '*Sem descrição*'"></markdown>
+        </div>
+
+        <div *ngIf="isEditingDescription" class="description-editor">
+          <textarea
+            [(ngModel)]="editedDescription"
+            placeholder="Escreva uma descrição usando Markdown..."
+            rows="5"
+          ></textarea>
+          <div class="editor-actions">
+            <button (click)="isEditingDescription = false">Cancelar</button>
+            <button class="primary" (click)="saveDescription()">Salvar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="comments-section">
+        <h3>Comentários</h3>
+        <div class="comments-list">
+          <div *ngFor="let comment of todo.comments" class="comment">
+            <markdown [data]="comment.text"></markdown>
+            <small>{{ comment.createdAt | date:'dd/MM/yyyy HH:mm' }}</small>
+          </div>
+        </div>
+
+        <div class="add-comment">
+          <textarea
+            [(ngModel)]="newComment"
+            placeholder="Adicione um comentário (suporta Markdown)..."
+            rows="3"
+          ></textarea>
+          <button class="primary" (click)="addComment()">
+            Adicionar Comentário
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
