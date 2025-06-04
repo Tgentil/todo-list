@@ -1,6 +1,10 @@
 # Todo List App 📝
 
+[![Website](https://img.shields.io/badge/🌍&nbsp;&nbsp;Visite-Website-4285f4?style=flat-square&logo=globe)](https://staging.d3drvlzroj12nd.amplifyapp.com/)
+
 Aplicação web moderna desenvolvida com Angular para gerenciamento de tarefas, oferecendo uma experiência de usuário intuitiva e responsiva.
+
+link da aplicação: [CLIQUE AQUI](https://staging.d3drvlzroj12nd.amplifyapp.com/)
 
 ## 👥 Integrantes do Grupo
 
