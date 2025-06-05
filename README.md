@@ -8,7 +8,7 @@ link da aplicação: [CLIQUE AQUI](https://staging.d3drvlzroj12nd.amplifyapp.com
 
 ## 👥 Integrantes do Grupo
 
-- Davi Cardoso Rhee
+- Davi Cardoso Rhee - 1072221147 - davirhee
 - Douglas Rodrigues Toledo
 - João Pedro de Novais Sombra - 1072221731 - jopnovais
 - Luiz Felipe Correa Soares - 1072223007  - LFSCorr
